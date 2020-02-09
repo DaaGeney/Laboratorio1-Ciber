@@ -1,4 +1,4 @@
-# Proceso de instlacion smoothwall
+# Proceso de instalacion smoothwall
 
  ![IMAGEN](https://raw.githubusercontent.com/DaaGeney/Laboratorio1-Ciber/master/Evidencias%20Smoothwall/Captures/paso1.PNG)
   ![IMAGEN](https://raw.githubusercontent.com/DaaGeney/Laboratorio1-Ciber/master/Evidencias%20Smoothwall/Captures/paso2.PNG)
