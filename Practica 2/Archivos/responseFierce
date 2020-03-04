@@ -1,0 +1,29 @@
+Now logging to responseFierce
+DNS Servers for intezer.com:
+	ns46.domaincontrol.com
+	ns45.domaincontrol.com
+
+Trying zone transfer first...
+	Testing ns46.domaincontrol.com
+		Request timed out or transfer not allowed.
+	Testing ns45.domaincontrol.com
+		Request timed out or transfer not allowed.
+
+Unsuccessful in zone transfer (it was worth a shot)
+Okay, trying the good old fashioned way... brute force
+
+Checking for wildcard DNS...
+Nope. Good.
+Now performing 2280 test(s)...
+88.218.118.30	www.intezer.com
+88.218.118.30	ftp.intezer.com
+52.166.34.156	vpn.intezer.com
+
+Subnets found (may want to probe here using nmap or unicornscan):
+	52.166.34.0-255 : 1 hostnames found.
+	88.218.118.0-255 : 2 hostnames found.
+
+Done with Fierce scan: http://ha.ckers.org/fierce/
+Found 3 entries.
+
+Have a nice day.
