@@ -41,8 +41,8 @@ Al ejecutar el comando anterior se presentaon un sin número de errores que nos 
 
 ![Chale, no cargó la imagen.](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/FailedKali.png)
 
-## Escaneo de redes. 
-### TCP: Full 
+# Escaneo de redes. 
+## TCP: Full 
 Las ip's seleccionadas fueron:
 
 88.218.118.10
@@ -53,4 +53,41 @@ Las ip's seleccionadas fueron:
 
 88.218.118.101
 ![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Escaneo%20de%20redes%20-%20copia/Full_88.218.118.101.png)
+
+#### Ejecucion comandos en Kali 
+
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Escaneo%20de%20redes%20-%20copia/Full.png)
+
+## TCP: Half 
+Las ip's seleccionadas fueron:
+
+88.218.118.10
+![Chale, no cargó la imagen.](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Escaneo%20de%20redes%20-%20copia/Half_88.218.118.10.png)
+
+88.218.118.100 
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Escaneo%20de%20redes%20-%20copia/Half_88.218.118.100.png)
+
+88.218.118.101
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Escaneo%20de%20redes%20-%20copia/Half_88.218.118.101.png)
+
+#### Ejecucion comandos en Kali 
+
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Escaneo%20de%20redes%20-%20copia/Half.png)
+
+## TCP:Ack prove
+Las ip's seleccionadas fueron:
+
+88.218.118.10
+![Chale, no cargó la imagen.](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Escaneo%20de%20redes%20-%20copia/Ack-prov_88.218.118.10.png)
+
+88.218.118.100 
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Escaneo%20de%20redes%20-%20copia/Ack-prov_88.218.118.100.png)
+
+88.218.118.101
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Escaneo%20de%20redes%20-%20copia/Ack-prov_88.218.118.101.png)
+
+#### Ejecucion comandos en Kali 
+
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Escaneo%20de%20redes%20-%20copia/Ack-prov.png)
+
 
