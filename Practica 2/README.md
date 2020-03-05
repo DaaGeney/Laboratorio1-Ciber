@@ -36,8 +36,10 @@ Al realizar la busqueda de las ip encontradas por el comando inicial de Fierce, 
 ```
 theHarvester -d intezer.com -b baidu,bing,certspotter,crtsh,dnsdumpster,dogpile,duckduckgo,google,intelx,linkedin,linkedin_links,netcraft,otx,securityTrails,threatcrowd,trello,twitter,vhost,virustotal,yahoo -f responseHavester
 ```
-Al ejecutar el comando anterior se presentaon un sin número de errores que nos obligaron a realizar modificaciones a este; aún así, el comando anterior no nos dió resultado satisfactorio. 
+Al ejecutar el comando anterior se presentaron un sin número de errores que nos obligaron a realizar modificaciones a este. Finalmente logramos que el comando nos trajera informacion relacionada al dominio pero fue imposible lograr que se almacenara en un archivo.
 #### Imagenes de evidencia: 
+![Chale, no cargó la imagen.](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/HarvesterUsers.png)
+![Chale, no cargó la imagen.](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/HarvesterUrl.png)
 
 ![Chale, no cargó la imagen.](https://raw.githubusercontent.com/DaaGeney/RepoCiber/master/Practica%202/Archivos/FailedKali.png)
 
