@@ -1,0 +1,94 @@
+Hashing   (Comandos para hashing)
+
+¿Cuáles son los valores de los hash (md5 y sha1) de todas las imágenes?
+Los valores hash para el disco duro son: 
+	MD5: a49d1254c873808c58e6f1bcd60b5bde
+	SHA1:026c143638295db1fbfa598c5b35bcac4860ba73ec5da1cc87b67afd598be4e2
+
+¿Cuál es la importancia forense de los hashes?
+	Los hash permiten verificar si un archivo ha sido modificado, esto debido a que cada archivo tiene hash diferente y al realizar la modificacion este variará entre una versión y la otra, adicionalmente los hash tambien permiten realizar y verificar la encriptación de archivos.
+ 
+¿Cómo se puede mejorar el proceso forense a través del uso de hashes?
+	El uso de los hashes permite mejorar el proceso de forense al verificar si la huella digital de los datos ha sufrido modificaciones por medio de manipulaicones, esto ayuda a obtener informacion como cuando y que cambios se han realizado 
+
+
+Particiones del disco duro (Herramientas para la información de las particiones)
+
+¿Cuantas particiones tiene el disco?
+	El disco duro posee dos particiones, una reservada para el sistema que nosta de 100 mb y la partición donde se encuentra el sistema operativo que posee 19.9Gb
+¿Cuál partición contiene la información?
+	La partición que contiene la informacion es la partición en la que se encuentra el sistema operativo.
+La partición que contiene la información ¿En qué sector inicia?
+	Según el programa Autopsy, e investigando un poco en los archivos, encontramos que el volumen 2 y 3 poseen informacion, pero es el volumen 3 el que posee la informacion correspondiente y esta empieza en el sector 206847
+
+vol2 (NTFS / exFAT (0x07): 2048-206847)		2	2048	204800		NTFS / exFAT (0x07)	Allocated	
+vol3 (NTFS / exFAT (0x07): 206848-41940991)	3	206848	41734144	NTFS / exFAT (0x07)	Allocated	
+
+Identifique si es posible montar la partición de la información
+
+En caso de poder montar la información navegue por las carpetas en busqueda de información realativa al caso
+	Investigando nos encontramos con que esncuentra informacion que resulta sospechosa, tal como pdf's about tecnicas de antiforense y borrado de documentacion, adicionalmente se encuentra demasiadas imagenes de .net lo cual se torna sospechoso.
+
+
+
+Informacion del sistema operativo
+1. Identificacion sistema instalado.
+	Windows 7 ultimate Sp 1
+2. Nombre sistema operativo
+	Windows 7
+3. Version sistema operativo
+	Ultimate
+4. Fecha de instalación. 
+	2015-03-25 05:15:19 
+5. Registrado a:
+	informant
+6. Nombre del pc 
+	Informant-pc
+7. Zona horaria
+	COT (Colombia Time)
+8. Quien inicio sesion por ultima vez?
+	admin11
+9.Informacion interfaces de red
+	Ver imagen
+10. Aplicaciones instaladas
+	Ver imagen
+12. Navegadores usados
+	Chrome
+	Edge
+	Internet Explorer
+13. Ubicaciones historiales de navegacion
+	Google Chrome: /img_Practica1.dd/vol_vol3/Users/informant/AppData/Local/Google/Chrome/User Data/Default/History	
+	Edge: /img_Practica1.dd/vol_vol3/Users/informant/AppData/Local/Microsoft/Windows/WebCache/WebCacheV01.dat	
+	Internet explorer: /img_Practica1.dd/vol_vol3/Users/informant/AppData/Local/Microsoft/Windows/Temporary Internet Files/Low/Content.IE5/index.dat	
+
+14. evidencia de navegacion:
+	Chrome:Data leakage methods, leaking confidential information, information leakage cases
+	Internet explorer: file sharinf and tethering, external devices and forensics, anti-forensic tool
+15. Sitios que parezcan sospechosos
+	Ignorando las busquedas de google, los sitios mas sospechosos son los siguientes: 
+	http://www.sans.org/reading-room/whitepapers/awareness/data-leakage-threats-mitigation_1931	
+	http://www.emirates247.com/business/technology/top-5-sources-leaking-personal-data-2015-03-13-1.584027	
+	http://www.mediapost.com/publications/article/205047/google-to-settle-data-leakage-case-for-85-mill.html?edition=	
+	http://www.fbi.gov/about-us/investigate/white_collar/ipr/ipr	
+	http://research.microsoft.com/en-us/um/people/yael/publications/2001-leak_secret.pdf	
+	http://en.wikipedia.org/wiki/Digital_forensics	
+	http://nij.gov/topics/forensics/evidence/digital/pages/welcome.aspx	
+	http://download.microsoft.com/download/1/8/F/18F9AE2C-4A10-417A-8408-C205420C22C3/Windows6.1-KB2786081-x64.cab	
+
+16. direcciones de correo sospechosas
+	Spy.conspirator@nist.gov
+	imagen de prueba 	
+
+17. ¿Pueden ser recuperados los correo enviados?
+	Si, los correos enviados pueden ser recuperados. Imagen de prueba.
+
+Información eliminada
+Identifique cuales archivos fueron eliminados del disco duro.
+	Ver archivo
+
+--
+--
+Evidencias relativas al caso:
+	En la lista de archivos recuperados encontramos con que el usuarios tenía en su dispositivo de almacenamiento archivos de la empresa que estaban calificados como secretos, tales como "secret project progress".
+
+
